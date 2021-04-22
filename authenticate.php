@@ -21,6 +21,7 @@ $salary = $_POST['salary']
             //if $volume is set, then redirect to volume page
         }elseif ($selection == "volume") {
             header("Location: volume.php");
+            //if $salary is set, then redirect to salary page
         }elseif ($selection == "salary"){
             header("Location: salary.php");
         }
