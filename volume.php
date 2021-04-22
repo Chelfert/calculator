@@ -23,15 +23,16 @@ function volume($length, $width, $height) {
             <label for="hght">Please enter the height</label>
             <input type="number" value="number" name="height"><br>
             <input type="submit" value="Submit" name="Submit"><br><br>
+
+            <br><br><br><br>
+            <br><br><br><br>
+            <input type="submit" value="Go Home" name="Home">
             <?php
             if (isset($_POST['Submit'])) {
                 volume($_POST['length'], $_POST['width'], $_POST['height']);
             }
             ?>
-            <br><br><br><br>
-            <br><br><br><br>
-            <input type="submit" value="Go Home" name="Home">
-                        <?php
+            <?php
             if (isset($_POST['Home'])) {
                 header("Location: index.php");
             }
