@@ -9,7 +9,10 @@ function volume($length, $width, $height) {
 ?>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;500&display=swap" rel="stylesheet"> 
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="mystyle.css">
         <title>Volume</title>
     </head>
     <body>
@@ -17,11 +20,11 @@ function volume($length, $width, $height) {
         <br>
         <form action="" method="POST">
             <label for="len">Please enter the length</label>
-            <input type="number" value="number" name="length"><br>
+            <input type="number" value="number" name="length"><br><br>
             <label for="wid">Please enter the width</label>
-            <input type="number" value="number" name="width"><br>
+            <input type="number" value="number" name="width"><br><br>
             <label for="hght">Please enter the height</label>
-            <input type="number" value="number" name="height"><br>
+            <input type="number" value="number" name="height"><br><br>
             <input type="submit" value="Submit" name="Submit"><br><br>
 
             <br><br><br><br>

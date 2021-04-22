@@ -1,7 +1,10 @@
 <?php session_start();
-
-$circumference = $_POST['circumference'];
+$selection = $_POST['option'];
+/*$circumference = $_POST['circumference'];
 $volume = $_POST['volume'];
+$salary = $_POST['salary']
+ 
+ */
 ?>
 <!DOCTYPE html>
 
@@ -13,11 +16,13 @@ $volume = $_POST['volume'];
     <body>
         <?php
         //if $circumference is set, then redirect to circumference page
-        if ($circumference == true) {
+        if ($selection == "circumference") {
             header("Location: circumference.php");
             //if $volume is set, then redirect to volume page
-        }elseif ($volume == true) {
+        }elseif ($selection == "volume") {
             header("Location: volume.php");
+        }elseif ($selection == "salary"){
+            header("Location: salary.php");
         }
         ?>
     </body>
