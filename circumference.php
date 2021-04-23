@@ -24,20 +24,20 @@ function calculate($radius) {
             <br>Please enter the radius in inches.
             <form action="" method="POST">
                 <input type="submit" value="Submit" name="Submit">
-                <input type="number" value="number" name="number">
-
+                <input type="number" step= '0.01' value="number" name="number">
+                <br><br><br>
                 <?php
                 if (isset($_POST['Submit'])) {
                     global $radius, $circumference;
                     $radius = $_POST['number'];
                     //$_POST['Submit'] = false;
-                    echo "<br><hr><br>";
+                    echo "<br><br>";
                     $circumference = calculate($radius);
                     echo ("The circumference of your circle in inches is $circumference");
                 }
                 ?>
-                <br><br><br><br><br><br>
-                <br><br><br><br><br><br>
+
+                <br><br><br><br>
                 <input type="submit" value="Go Home" name="Home">
             </form> 
             <?php

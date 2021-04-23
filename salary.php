@@ -42,17 +42,15 @@ function mpaychecksalary($paycheck) {
             <label for="mPychk">Monthly Paycheck</label><br>
             <input type="submit" value="Submit" name="Submit"><br><br>
 
-            <br><br><br><br>
-            <br><br><br><br>
-            <input type="submit" value="Go Home" name="Home">
+            <br><br><br>
             <?php
             if (isset($_POST['Submit']) & (isset($_POST['hourly']))) {
                 //if hourly rate is set
-                echo "<br><br><hr><form>";
-                echo "<input type='number' id='rate' name='rate' value='rate'>";
-                echo "<label for='hourlyrate'>Hourly Rate</label><br>";
-                echo "<input type='number' id='hoursWorked' name='hoursWorked' value='hoursWorked'>";
-                echo "<label for='hrsWrked'>Hours Worked</label><br>";
+                echo "<form>";
+                echo "<input type='number' step= '0.01' id='rate' name='rate' value='rate'>";
+                echo "<label for='hourlyrate'>Hourly Rate</label><br><br>";
+                echo "<input type='number' step= '0.01' id='hoursWorked' name='hoursWorked' value='hoursWorked'>";
+                echo "<label for='hrsWrked'>Hours Worked</label><br><br>";
                 echo "<input type='submit' value='hourlySubmit' name='hourlySubmit'><br><br>";
             }
             //call function once numbers are submitted
@@ -81,10 +79,14 @@ function mpaychecksalary($paycheck) {
             if (isset($_POST['monthlySubmit'])) {
                 mpaychecksalary($_POST['monthlyPay']);
             }
+
             //go home button is pressed
             if (isset($_POST['Home'])) {
                 header("Location: index.php");
             }
             ?>
+            <br><br><br><br>
+            <input type="submit" value="Go Home" name="Home">
+        </form>
             </body>
             </html>

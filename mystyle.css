@@ -9,6 +9,7 @@ and open the template in the editor.
 */
 * {
     font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 42px;
 }
 body {
     background-color: #be62e3;

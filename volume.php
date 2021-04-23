@@ -4,7 +4,11 @@
 
 function volume($length, $width, $height) {
     $volume = $length * $width * $height;
-    echo "The volume of your container is $volume";
+    echo "The volume of your container is $volume cubic inches";
+}
+function CFvolume($length, $width, $height) {
+    $volume = $length * $width * $height;
+    echo "The volume of your container is $volume cubic feet";
 }
 ?>
 <html>
@@ -20,19 +24,22 @@ function volume($length, $width, $height) {
         <br>
         <form action="" method="POST">
             <label for="len">Please enter the length</label>
-            <input type="number" value="number" name="length"><br><br>
+            <input type="number" step="0.01" value="number" name="length"><br><br>
             <label for="wid">Please enter the width</label>
-            <input type="number" value="number" name="width"><br><br>
+            <input type="number" step="0.01" value="number" name="width"><br><br>
             <label for="hght">Please enter the height</label>
-            <input type="number" value="number" name="height"><br><br>
-            <input type="submit" value="Submit" name="Submit"><br><br>
+            <input type="number" step="0.01" value="number" name="height"><br><br>
+            <input type="submit" value="Cubic Inches submit" name="CISubmit"><br><br>
+            <input type="submit" value="Cubic Feet submit" name="CFSubmit"><br><br>
 
-            <br><br><br><br>
-            <br><br><br><br>
-            <input type="submit" value="Go Home" name="Home">
+            <br><br><br>
+            
             <?php
-            if (isset($_POST['Submit'])) {
+            if (isset($_POST['CISubmit'])) {
                 volume($_POST['length'], $_POST['width'], $_POST['height']);
+            }
+            if (isset($_POST['CFSubmit'])) {
+                CFvolume($_POST['length'], $_POST['width'], $_POST['height']);
             }
             ?>
             <?php
@@ -40,6 +47,8 @@ function volume($length, $width, $height) {
                 header("Location: index.php");
             }
             ?>
+            <br><br><br><br>
+            <input type="submit" value="Go Home" name="Home">
         </form> 
 
     </body>
