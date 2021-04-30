@@ -80,7 +80,7 @@ function mpaychecksalary($paycheck) {
                 mpaychecksalary($_POST['monthlyPay']);
             }
 
-            //go home button is pressed
+            //go home button is pressed .
             if (isset($_POST['Home'])) {
                 header("Location: index.php");
             }
